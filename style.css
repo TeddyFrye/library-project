@@ -1,0 +1,36 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-gap: 1px;
+    width: 300px;
+    height: 300px;
+    margin: 5px auto;
+  }
+  
+  .square {
+    background-color: darkblue;
+    border: 3px solid black;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .button {
+    margin: 50px auto;
+    padding: 10px 20px;
+    background-color: gray;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .bookshelf{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    height:200px;
+    background-color: #774214;
+    border: 10px solid #49280c;
+  }
+
+  
