@@ -1,5 +1,4 @@
 
-  
   .button {
     margin: 50px auto;
     padding: 10px 20px;
@@ -9,7 +8,7 @@
     cursor: pointer;
   }
 
-  .bookshelf{
+  .bookContainer{
     display: flex;
     flex-wrap: wrap;
     width: 1000px;
@@ -18,4 +17,31 @@
     border: 10px solid #49280c;
   }
 
+  .book{
+    width: 20px;
+    height:100px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .book[data-color="0"] {
+    background-color: greenyellow;
+  }
   
+  .book[data-color="1"] {
+    background-color: #C70039;
+  }
+  
+  .book[data-color="2"] {
+    background-color: darkgoldenrod;
+  }
+  
+  .book[data-color="3"] {
+    background-color: darkslateblue;
+  }
