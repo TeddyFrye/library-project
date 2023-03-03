@@ -3,12 +3,12 @@ function Book(title, author, pages, read) {
     this.author = author
     this.pages = pages
     this.read = read
-    this.sayTitle = function() {
-      console.log(title)
-    }
-  }
+    this.sayInfo = function() {
+        return `Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}, Read: ${this.read}`
+      }};
   
-  const book1 = new Book(['The Hobbit'], ['J. R. R. Tolkien'], ['295 pages'], ['have read'])
-  const book2 = new Book(['The Name of the Wind'], ['Patrick Rothfuss'], ['662 pages'], ['have not read'])
-  book1.sayInfo() 
-  book2.sayInfo()) 
+  const book1 = new Book('The Hobbit', 'J. R. R. Tolkien', '295 pages', 'have read');
+  const book2 = new Book('The Name of the Wind', 'Patrick Rothfuss', '662 pages', 'have not read');
+  
+  console.log(book1.sayInfo())
+  console.log(book2.sayInfo())
