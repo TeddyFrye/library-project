@@ -37,16 +37,17 @@ function addBookToLibrary(){
 
 
 
-// Button Actions
-const clear = document.querySelector("clear");
+// Button Actions (CLEAR BUTTON NOT READY)
+const addBookButton = document.getElementById("add-book-button");
+addBookButton.addEventListener("click", addBookToLibrary);
+
+/*const clear = document.querySelector("clear");
 clear.addEventListener("click", (e) => {
   bookSpine.forEach((bookSpine) => {
     bookSpine.style.backgroundColor = "";
   });
 });
-
-const addBookButton = document.getElementById("add-book-button");
-addBookButton.addEventListener("click", addBookToLibrary);
+*/
 
 
 
