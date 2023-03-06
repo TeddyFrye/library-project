@@ -23,7 +23,7 @@ function addBookToLibrary(){
     const author = document.getElementById("author-input").value;
     const page = document.getElementById("page-input").value;
     const read = document.getElementById("read-input").value;
-    const bookContainer = document.getElementById("book-container");
+    const bookShelf = document.getElementById("book-container");
     const randomColorIndex = Math.floor(Math.random() * 4);
   
     // Create a new book element and apply the .book class and data-color style
@@ -49,7 +49,7 @@ function addBookToLibrary(){
     book.appendChild(readElement);
     
     // Add the new book element to the book container
-    bookContainer.appendChild(book);
+    bookShelf.appendChild(book);
   }
 }
 

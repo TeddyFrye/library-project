@@ -8,8 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="bookContainer"></div>
-    <div class="book-container"></div>
+    <div class="bookShelf"><div class="book"></div></div>
     <form onSubmit="createBook(event)">
         <label for="title">Book Title:</label>
         <input type="text" id="title"><br></br>
@@ -19,9 +18,9 @@
         <input type="text" id="pages"><br></br>
         <label for="read">Have you read it?</label>
         <input type="text" id="read"><br></br>
-      </form>
-    <button type="button" onclick="addBookToLibrary()">Add Book to Library</button>
-    <button id="clear">Clear the library</button>
+        <button type="button" onclick="addBookToLibrary()">Add Book to Library</button>
+        <button id="clear">Clear the library</button>
+    </form>
 
     <script src="path/to/script.js"></script>
 </body>

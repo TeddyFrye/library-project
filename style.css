@@ -8,7 +8,7 @@
     cursor: pointer;
   }
 
-  .bookContainer{
+  .bookShelf{
     display: flex;
     flex-wrap: wrap;
     width: 1000px;
