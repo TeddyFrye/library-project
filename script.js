@@ -34,10 +34,19 @@ function addBookToLibrary() {
   // Add book to shelf
   bookShelf.appendChild(book);
 }
+function clearLibrary() {
+  const bookShelf = document.getElementById('book-shelf');
+  while (bookShelf.firstChild) {
+    bookShelf.removeChild(bookShelf.firstChild);
+  }
+}
 
-// Button Actions (CLEAR BUTTON NOT READY)
+// Button Actions
 const addBookButton = document.getElementById('add-book-button');
 addBookButton.addEventListener('click', addBookToLibrary);
+
+const clearLibraryButton = document.getElementById('clear-library-button');
+clearLibraryButton.addEventListener('click', clearLibrary);
 
 /* const clear = document.querySelector("clear");
 clear.addEventListener("click", (e) => {
