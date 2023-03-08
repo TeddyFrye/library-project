@@ -65,14 +65,6 @@ addBookButton.addEventListener('click', addBookToLibrary);
 const clearLibraryButton = document.getElementById('clear-library-button');
 clearLibraryButton.addEventListener('click', clearLibrary);
 
-/* const clear = document.querySelector("clear");
-clear.addEventListener("click", (e) => {
-  bookSpine.forEach((bookSpine) => {
-    bookSpine.style.backgroundColor = "";
-  });
-});
-*/
-
 /*
 function Book(title, author, pages, read) {
     this.title = title

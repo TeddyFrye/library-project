@@ -1,4 +1,11 @@
-
+/*body{
+  background-image: url(img/library_background.jpeg);
+  background-size: cover;
+}
+label{
+  color:white;
+  font-size:large;
+}*/
   .button {
     margin: 50px auto;
     padding: 10px 20px;
