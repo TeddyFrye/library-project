@@ -18,32 +18,45 @@
   }
 
   .book{
-    width: 100px;
+    width: 50px;
     height:200px;
     border: 1px solid black;
-    display: flex-wrap;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
+    display: block;
+    margin: 2px;
+    padding: 15px;
+    text-align:center;
     writing-mode: vertical-rl;
     text-orientation: mixed;
+    line-height: 1px;
     font-size: 10px;
     font-weight: bold;
     color: white;
   }
 
+  .title{
+    color:lightsalmon;
+    font-size: 20px;
+    
+  }
+
   .book[data-color="0"] {
-    background-color: darkolivegreen;
+    background-image: url(img/bookspinedark.png);
+    background-size:cover;
+    color:white;
+    font-size: 10px;
   }
   
   .book[data-color="1"] {
-    background-color: #C70039;
+    background-image: url(img/bookspinebrwn.png);
+    background-size:cover;
   }
   
   .book[data-color="2"] {
-    background-color: darkgoldenrod;
+    background-image: url(img/bookspine.png);
+    background-size:cover;
   }
   
   .book[data-color="3"] {
-    background-color: darkslateblue;
+    background-image: url(img/bookspinegrey.png);
+    background-size:cover;
   }

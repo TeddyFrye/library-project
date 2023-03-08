@@ -16,6 +16,7 @@ function addBookToLibrary() {
   // Label book info
   const titleElement = document.createElement('p');
   titleElement.textContent = title;
+  titleElement.classList.add('title');
   book.appendChild(titleElement);
 
   const authorElement = document.createElement('p');
