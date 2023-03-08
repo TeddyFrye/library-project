@@ -12,8 +12,11 @@
     display: flex;
     flex-wrap: wrap;
     width: 1000px;
-    height: 500px;
-    background-color: #774214;
+    height: 750px;
+    margin: 30px;
+    padding: 30px;
+    background-image: url(img/empty_bookshelf.png);
+    background-size: contain;
     border: 10px solid #49280c;
   }
 
@@ -34,16 +37,14 @@
   }
 
   .title{
-    color:lightsalmon;
-    font-size: 20px;
-    
+    color:darkgrey;
+    font-size: 18px;
+    line-height: 0.1px;
   }
 
   .book[data-color="0"] {
     background-image: url(img/bookspinedark.png);
     background-size:cover;
-    color:white;
-    font-size: 10px;
   }
   
   .book[data-color="1"] {
