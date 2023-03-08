@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="book-shelf"><div class="book"></div></div>
+    <div class="bookShelf" id="book-shelf"></div>
     <form onSubmit="createBook(event)">
         <label for="title">Book Title:</label>
         <input type="text" id="title-input"><br></br>
@@ -16,8 +16,11 @@
         <input type="text" id="author-input"><br></br>
         <label for="pages">Page Count:</label>
         <input type="text" id="page-input"><br></br>
-        <label for="read">Have you read it?</label>
-        <input type="text" id="read-input"><br></br>
+
+<input type="radio" value="haveRead" name="readStatus"><label>I have read this book.</label>
+<input type="radio" value="notRead" name="readStatus"><label>I have not read this book.</label>
+
+        <br></br>
         <button type="button" id= "add-book-button">Add Book to Library</button>
         <button type="reset">Reset book info</button>
     </form>

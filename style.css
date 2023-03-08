@@ -8,30 +8,32 @@
     cursor: pointer;
   }
 
-  .book-shelf{
+  .bookShelf{
     display: flex;
     flex-wrap: wrap;
     width: 1000px;
-    height:200px;
+    height: 500px;
     background-color: #774214;
     border: 10px solid #49280c;
   }
 
   .book{
-    width: 20px;
-    height:100px;
+    width: 100px;
+    height:200px;
     border: 1px solid black;
-    display: inline-block;
+    display: flex-wrap;
     margin: 10px;
     padding: 10px;
     text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
     font-size: 10px;
     font-weight: bold;
     color: white;
   }
 
   .book[data-color="0"] {
-    background-color: greenyellow;
+    background-color: darkolivegreen;
   }
   
   .book[data-color="1"] {
