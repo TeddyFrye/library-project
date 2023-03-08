@@ -61,3 +61,17 @@
     background-image: url(img/bookspinegrey.png);
     background-size:cover;
   }
+
+/*Image Styling*/
+
+.librarian-image{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    
+    height:1000px;
+    width: 500px;
+    border-radius: 150px;
+    transform: translate(-50%,-60%) scale(0);
+
+}

@@ -1,3 +1,16 @@
+// Dynamic Images
+
+const jocasta = document.querySelector('.librarian-image');
+
+function popIn() {
+  jocasta.style.transitionDuration = '.5s';
+  jocasta.style.transform = 'translate(-50%,-50%) scale(1)';
+}
+function popOut() {
+  jocasta.style.transitionDuration = '.5s';
+  jocasta.style.transform = 'translate(-50%,-60%) scale(0)';
+}
+
 // JS to take the book info and put in the "library"
 
 function addBookToLibrary() {
@@ -31,8 +44,12 @@ function addBookToLibrary() {
   readElement.textContent = readStatus === 'haveRead' ? 'Read' : 'Unfinished';
   book.appendChild(readElement);
 
-  // Add book to shelf
-  bookShelf.appendChild(book);
+  if (!title || !author || !page || !readStatus) {
+    popIn(); // Make the image pop in
+  } else {
+    popOut();
+    bookShelf.appendChild(book);
+  }
 }
 function clearLibrary() {
   const bookShelf = document.getElementById('book-shelf');
