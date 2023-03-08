@@ -17,7 +17,7 @@ function addBookToLibrary() {
   const title = document.getElementById('title-input').value;
   const author = document.getElementById('author-input').value;
   const page = document.getElementById('page-input').value;
-  const readStatus = document.querySelector('input[name="readStatus"]:checked').value;
+  const readStatus = document.querySelector('input[name="readStatus"]:checked');
   const bookShelf = document.getElementById('book-shelf');
   const randomColorIndex = Math.floor(Math.random() * 4);
 
@@ -56,6 +56,7 @@ function clearLibrary() {
   while (bookShelf.firstChild) {
     bookShelf.removeChild(bookShelf.firstChild);
   }
+  popOut();
 }
 
 // Button Actions
