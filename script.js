@@ -10,7 +10,15 @@ function popOut() {
   jocasta.style.transitionDuration = '.5s';
   jocasta.style.transform = 'translate(-50%,-60%) scale(0)';
 }
+readStatus.addEventListener('change', () => {
+    readStatus = 'haveRead';
+    readElement.textContent = 'Read';
+  });
 
+  unfinishedRadio.addEventListener('change', () => {
+    readStatus = 'Unfinished';
+    readElement.textContent = 'Unfinished'
+  });
 // JS to take the book info and put in the "library"
 
 function addBookToLibrary() {
@@ -41,7 +49,7 @@ function addBookToLibrary() {
   book.appendChild(pageElement);
 
   const readElement = document.createElement('p');
-  readElement.textContent = readStatus === 'haveRead' ? 'Read' : 'Unfinished';
+  readElement.textContent = readStatus.value === 'haveRead' ? 'Read' : 'Unfinished';
   book.appendChild(readElement);
 
   if (!title || !author || !page || !readStatus) {
