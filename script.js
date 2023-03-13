@@ -10,6 +10,8 @@ function popOut() {
   jocasta.style.transitionDuration = '.5s';
   jocasta.style.transform = 'translate(-50%,-60%) scale(0)';
 }
+const fullLibrary = 33;
+let numBooks = 0;
 
 // JS to take the book info and put in the "library"
 
@@ -20,7 +22,12 @@ function addBookToLibrary() {
   const readStatus = document.querySelector('input[name="readStatus"]:checked');
   const bookShelf = document.getElementById('book-shelf');
   const randomColorIndex = Math.floor(Math.random() * 4);
-
+  if (numBooks >= fullLibrary) {
+    // eslint-disable-next-line no-alert
+    alert('You have reached the maximum number of books allowed in the library.');
+  }
+  // eslint-disable-next-line no-plusplus
+  numBooks++;
   // Create book and color
   const book = document.createElement('div');
   book.classList.add('book');
