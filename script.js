@@ -10,15 +10,7 @@ function popOut() {
   jocasta.style.transitionDuration = '.5s';
   jocasta.style.transform = 'translate(-50%,-60%) scale(0)';
 }
-readStatus.addEventListener('change', () => {
-    readStatus = 'haveRead';
-    readElement.textContent = 'Read';
-  });
 
-  unfinishedRadio.addEventListener('change', () => {
-    readStatus = 'Unfinished';
-    readElement.textContent = 'Unfinished'
-  });
 // JS to take the book info and put in the "library"
 
 function addBookToLibrary() {
@@ -51,6 +43,11 @@ function addBookToLibrary() {
   const readElement = document.createElement('p');
   readElement.textContent = readStatus.value === 'haveRead' ? 'Read' : 'Unfinished';
   book.appendChild(readElement);
+
+  readStatus.addEventListener('change', () => {
+    readStatus.value = 'haveRead';
+    readElement.textContent = 'Read';
+  });
 
   if (!title || !author || !page || !readStatus) {
     popIn(); // Make the image pop in
