@@ -17,7 +17,12 @@ function addBookToLibrary() {
   const title = document.getElementById('title-input').value;
   const author = document.getElementById('author-input').value;
   const page = document.getElementById('page-input').value;
+<<<<<<< Updated upstream
   const readStatus = document.querySelector('input[name="readStatus"]:checked').value;
+=======
+  const haveReadRadio = document.getElementById('have-read-radio');
+  const unfinishedRadio = document.getElementById('unfinished-radio');
+>>>>>>> Stashed changes
   const bookShelf = document.getElementById('book-shelf');
   const randomColorIndex = Math.floor(Math.random() * 4);
 
@@ -40,9 +45,22 @@ function addBookToLibrary() {
   pageElement.textContent = `${page} pages`;
   book.appendChild(pageElement);
 
+  let readStatus = 'UNASSIGNED';
+
   const readElement = document.createElement('p');
   readElement.textContent = readStatus === 'haveRead' ? 'Read' : 'Unfinished';
-  book.appendChild(readElement);
+
+  haveReadRadio.addEventListener('change', () => {
+    readStatus = 'haveRead';
+    readElement.textContent = 'Read';
+    book.appendChild(readElement);
+  });
+
+  unfinishedRadio.addEventListener('change', () => {
+    readStatus = 'Unfinished';
+    readElement.textContent = 'Unfinished';
+    book.appendChild(readElement);
+  });
 
   if (!title || !author || !page || !readStatus) {
     popIn(); // Make the image pop in
@@ -51,6 +69,7 @@ function addBookToLibrary() {
     bookShelf.appendChild(book);
   }
 }
+
 function clearLibrary() {
   const bookShelf = document.getElementById('book-shelf');
   while (bookShelf.firstChild) {

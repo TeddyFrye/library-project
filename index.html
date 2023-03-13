@@ -16,11 +16,11 @@
         <input type="text" id="author-input"><br></br>
         <label for="pages">Page Count:</label>
         <input type="text" id="page-input"><br></br>
-        <input type="radio" value="haveRead" name="readStatus"><label>I have read this book.</label>
-        <input type="radio" value="notRead" name="readStatus"><label>I have not read this book.</label>
+        <input type="radio" id="have-read-radio"><label for="haveReadRadio">I have read this book.</label>
+        <input type="radio" id="unfinished-radio"><label for="unfinishedRadio">I have not read this book.</label>
         <br></br>
-        <button type="button" id= "add-book-button">Add Book to Library</button>
-        <button type="reset">Reset book info</button>
+        <button type="button" value= "add-book-button" name="readButton">Add Book to Library</button>
+        <button type="reset" value="reset-button" name="readButton">Reset book info</button>
     </form>
     <button type="button" id="clear-library-button">Clear the library</button>
 
